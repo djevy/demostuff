@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .title-container {
+            background-color: rgb(200, 200, 200);
+            padding: 15px;
+            margin-bottom: 50px;
+        }
+
+        .box-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo-left {
+            display: flex;
+            justify-content: left;
+        }
+
+        .expand-window {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            width: 375px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.7);
+            margin: 10px;
+            transition: 0.5s;
+        }
+
+        .expand-window2 {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            width: 375px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.7);
+            margin: 10px;
+        }
+
+        .is-expanded {
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.7);
+            margin: 10px;
+            transition: 0.5s;
+        }
+
+        .expand-btn {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="title-container">
+        <div class="logo-left">
+            <p>Logo</p>
+        </div>
+        <p>Title</p>
+        <p>Title 2</p>
+    </div>
+</header>
+
+<div class="box-container">
+
+    <div class="left-container">
+        <div class="js-expand-window expand-window">
+            <button class="js-expand-btn expand-btn" onclick="
+                expandWindow();
+            ">+</button>
+        </div>
+        
+        <div class="js-expand-window2 expand-window2">
+            <button class="js-expand-btn expand-btn" onclick="
+                
+            ">+</button>
+        </div>
+    </div>
+
+
+    <div class="mid-container">
+        <div class="js-expand-window3 expand-window2">
+            <button class="js-expand-btn expand-btn" onclick="
+               
+            ">+</button>
+        </div>
+        
+        <div class="js-expand-window4 expand-window">
+            <button class="js-expand-btn expand-btn" onclick="
+                
+            ">+</button>
+        </div>
+    </div>
+    
+    <div class="right-container">
+        <div class="js-expand-window5 expand-window">
+            <button class="js-expand-btn expand-btn" onclick="
+                
+            ">+</button>
+        </div>
+        
+        <div class="js-expand-window6 expand-window2">
+            <button class="js-expand-btn expand-btn" onclick="
+                
+            ">+</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+        const windowElement = document.querySelector('.js-expand-window');
+        const leftContainer = document.querySelector('.left-container')
+        const buttonElement = document.querySelector('.js-expand-btn');
+
+
+    function expandWindow() {
+
+        if (!windowElement.classList.contains('is-expanded')) {
+            windowElement.classList.add('is-expanded');
+            leftContainer.classList.add('center-box');
+            buttonElement.innerHTML = ' - ';
+        } 
+        
+        else {
+            windowElement.classList.remove('is-expanded');
+            buttonElement.innerHTML = ' + ';
+        }
+    }
+
+</script>
+</body>
+</html>
