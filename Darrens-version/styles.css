@@ -16,6 +16,7 @@ body {
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-content: space-evenly;
+    padding: 20px 0;
 }
 
 .logo-left {
@@ -64,15 +65,15 @@ body {
 }
 
 .is-expanded {
-    width: 800px;
+    max-width: 700px;
     height: 500px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.7);
-    margin: 10px;
+    margin: auto;
     transition: 0.5s;
-    grid-column: span 3/3 !important;
-    grid-row: span 3/3 !important;
+    grid-column: span 3 !important;
+    grid-row: span 3 !important;
 }
 
 
